@@ -8,8 +8,7 @@ CORS(app)
 def landingPage():
     # return jsonify({'name':"Prateek Mahajan"})
     data = request.get_json()
-    return data
-
+    return jsonify(data)
 
 if __name__=='__main__':
 	app.run(debug=True)
