@@ -5,10 +5,9 @@ app = Flask(__name__)
 CORS(app)
 
 @app.route('/', methods=['GET','POST'])
-def landingPage(sensors):
-    # return jsonify({'name':"Prateek Mahajan"})
-    return sensors
-    data = request.get_json()
+def landingPage():
+    return jsonify({'name':"Prateek Mahajan"})
+    data = request.get_json(force=True)
     print(data)
     return jsonify(data)
 
